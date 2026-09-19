@@ -1,21 +1,36 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="background" style="flex-grow: 1; align-items: center; justify-content: center;">
-        <ui:VisualElement name="logo" />
-        <ui:VisualElement name="row" style="position: absolute; top: 66.6%;">
-            <ui:Button text="$mainScene_button_sing" name="startButton" class="mb-3" style="height: 60px; width: 160px; font-size: 18px;" />
-            <ui:Button text="$mainScene_button_party" name="partyButton" class="mainSceneButton ml-5" style="width: 160px; height: 60px; font-size: 18px;" />
-            <ui:Button text="$mainScene_button_onlineGame" name="onlineGameButton" class="mainSceneButton ml-5" style="width: 160px; height: 60px; font-size: 18px;" />
+    <ui:VisualElement name="background" style="flex-grow: 1; background-color: rgb(8, 10, 18); align-items: center; justify-content: center;">
+        <ui:VisualElement style="position: absolute; width: 920px; height: 920px; background-color: rgba(112, 71, 255, 0.10); border-top-left-radius: 460px; border-top-right-radius: 460px; border-bottom-left-radius: 460px; border-bottom-right-radius: 460px; top: -520px; right: -280px;" />
+        <ui:VisualElement style="position: absolute; width: 700px; height: 700px; background-color: rgba(255, 64, 145, 0.07); border-top-left-radius: 350px; border-top-right-radius: 350px; border-bottom-left-radius: 350px; border-bottom-right-radius: 350px; bottom: -430px; left: -280px;" />
+
+        <ui:VisualElement name="logo" style="width: 1px; height: 1px; opacity: 0;" />
+
+        <ui:VisualElement style="width: 80%; max-width: 1080px; min-width: 720px; align-items: stretch;">
+            <ui:Label text="KARAOKE NIGHT" style="font-size: 62px; -unity-font-style: bold; color: rgb(248, 248, 255); -unity-text-align: middle-center; margin-bottom: 4px;" />
+            <ui:Label text="Canta · Compite · Revienta tus récords" style="font-size: 20px; color: rgba(230, 230, 245, 0.68); -unity-text-align: middle-center; margin-bottom: 54px;" />
+
+            <ui:VisualElement name="row" style="flex-direction: row; justify-content: center; align-items: stretch;">
+                <ui:Button text="CANTAR" name="startButton" class="mb-3" style="height: 118px; width: 31%; min-width: 220px; font-size: 26px; -unity-font-style: bold; margin-right: 18px; background-color: rgb(112, 71, 255); color: white; border-top-left-radius: 24px; border-top-right-radius: 24px; border-bottom-left-radius: 24px; border-bottom-right-radius: 24px;" />
+                <ui:Button text="MODO FIESTA" name="partyButton" class="mainSceneButton" style="height: 118px; width: 31%; min-width: 220px; font-size: 23px; -unity-font-style: bold; margin-right: 18px; background-color: rgb(30, 34, 49); color: white; border-top-left-radius: 24px; border-top-right-radius: 24px; border-bottom-left-radius: 24px; border-bottom-right-radius: 24px;" />
+                <ui:Button text="ONLINE" name="onlineGameButton" class="mainSceneButton" style="height: 118px; width: 31%; min-width: 220px; font-size: 23px; -unity-font-style: bold; background-color: rgb(30, 34, 49); color: white; border-top-left-radius: 24px; border-top-right-radius: 24px; border-bottom-left-radius: 24px; border-bottom-right-radius: 24px;" />
+            </ui:VisualElement>
+
+            <ui:VisualElement style="margin-top: 32px; padding-left: 26px; padding-right: 26px; padding-top: 20px; padding-bottom: 20px; background-color: rgba(255, 255, 255, 0.045); border-top-left-radius: 18px; border-top-right-radius: 18px; border-bottom-left-radius: 18px; border-bottom-right-radius: 18px;">
+                <ui:Label text="🎤  Conecta tus micrófonos y selecciona los jugadores antes de empezar." style="font-size: 17px; color: rgba(240, 240, 250, 0.78); -unity-text-align: middle-center;" />
+            </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="bottomButtonRow" class="child-mr-2 pb-2 px-2" style="width: 100%; align-items: center; flex-direction: row; justify-content: flex-end; position: absolute; bottom: 0;">
+
+        <ui:VisualElement name="bottomButtonRow" class="child-mr-2 pb-2 px-2" style="width: 100%; align-items: center; flex-direction: row; justify-content: flex-end; position: absolute; bottom: 0; padding-left: 16px; padding-right: 16px; padding-bottom: 12px;">
             <ui:Button name="versionInfoContainer" class="transparentButton focusableNavigatorIgnore" style="overflow: visible; align-items: flex-start; margin-right: auto;">
-                <ui:Label text="Version xx.yy.zz" name="semanticVersionLabel" style="font-size: 12px; -unity-text-align: upper-center; border-top-left-radius: 12px; border-bottom-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; height: auto;" />
-                <ui:VisualElement name="versionDetailsContainer" style="background-color: rgba(0, 0, 0, 0); bottom: 110%; position: absolute; display: none; align-items: flex-start;">
-                    <ui:Label text="Commit: 5e07588" name="commitHashLabel" class="ignoreTheme" style="font-size: 12px; -unity-text-align: middle-left;" />
-                    <ui:Label text="Unity version: abcd.x.yfz" name="unityVersionLabel" class="ignoreTheme" style="font-size: 12px; -unity-text-align: middle-left;" />
-                    <ui:Label text="Build timestamp: yyMMddHHmm" name="buildTimeStampLabel" class="ignoreTheme" style="font-size: 12px; -unity-text-align: middle-left;" />
+                <ui:Label text="Karaoke Night · UltraStar Play" name="semanticVersionLabel" style="font-size: 11px; color: rgba(255,255,255,0.45); height: auto;" />
+                <ui:VisualElement name="versionDetailsContainer" style="background-color: rgba(0, 0, 0, 0.85); bottom: 110%; position: absolute; display: none; align-items: flex-start; padding-left: 8px; padding-right: 8px; padding-top: 8px; padding-bottom: 8px;">
+                    <ui:Label text="Commit" name="commitHashLabel" class="ignoreTheme" style="font-size: 12px;" />
+                    <ui:Label text="Unity version" name="unityVersionLabel" class="ignoreTheme" style="font-size: 12px;" />
+                    <ui:Label text="Build timestamp" name="buildTimeStampLabel" class="ignoreTheme" style="font-size: 12px;" />
                 </ui:VisualElement>
             </ui:Button>
-            <ui:Button name="supportTheProjectButton" class="transparentButton circleButton">
+
+            <ui:Button name="supportTheProjectButton" class="transparentButton circleButton" style="display: none;">
                 <MaterialIcon name="supportTheProjectIcon" icon="favorite" class="errorFontColor" />
             </ui:Button>
             <ui:Button name="createSongButton" class="transparentButton circleButton">
@@ -25,10 +40,10 @@
                 <MaterialIcon name="settingsIcon" icon="settings" />
                 <MaterialIcon name="settingsProblemHintIcon" icon="warning" class="settingsProblemHintIcon rounded warningFontColor" style="position: absolute; bottom: 100%;" />
             </ui:Button>
-            <ui:Button name="aboutButton" class="transparentButton circleButton">
+            <ui:Button name="aboutButton" class="transparentButton circleButton" style="display: none;">
                 <MaterialIcon name="aboutIcon" icon="info_outline" />
             </ui:Button>
-            <ui:Button name="creditsButton" class="transparentButton circleButton">
+            <ui:Button name="creditsButton" class="transparentButton circleButton" style="display: none;">
                 <MaterialIcon name="creditsIcon" icon="groups" />
             </ui:Button>
             <ui:Button name="quitButton" class="transparentButton circleButton">
